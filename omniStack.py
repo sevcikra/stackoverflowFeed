@@ -48,7 +48,7 @@ if response.info().get('Content-Encoding') == 'gzip':
 
 msg = MIMEText(html, 'html')  
 
-msg['Subject'] = 'StackOverflow: Omniture+SiteCatalyst Weekly Feed'
+msg['Subject'] = 'StackOverflow: Adobe Analytics Weekly Feed'
 msg['From'] = "from@example.com"
 msg['To'] = "to@example.com"
 

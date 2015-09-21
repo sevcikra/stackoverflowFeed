@@ -15,7 +15,8 @@ from email.mime.text import MIMEText
 with open ("auth/key.txt", "r") as myfile:
     myKey = myfile.read().split('\n')
 
-url = "https://api.stackexchange.com/2.1/search?order=desc&sort=creation&tagged=adobe-analytics&site=stackoverflow"
+stackoverflowTag = "adobe-analytics"
+url = "https://api.stackexchange.com/2.1/search?order=desc&sort=creation&tagged="+stackoverflowTag+"&site=stackoverflow"
 
 req = urllib2.Request(url)
 req.add_header('Accept-encoding', 'gzip')

@@ -12,7 +12,11 @@ import smtplib
 # Import the email modules we'll need
 from email.mime.text import MIMEText
 
-with open ("auth/key.txt", "r") as myfile:
+import os
+script_dir = os.path.dirname(__file__)
+abs_file_path = os.path.join(script_dir, "auth/key.txt")
+
+with open (abs_file_path, "r") as myfile:
     myKey = myfile.read().split('\n')
 
 stackoverflowTag = "adobe-analytics"
